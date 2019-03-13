@@ -18,7 +18,9 @@
     "test": "umi test",
     "test:component": "umi test ./src/components",
     "test:all": "node ./tests/run-tests.js",
-    "prettier": "node ./scripts/prettier.js"
+    "prettier": "node ./scripts/prettier.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "ant-design-pro": "^2.1.1",
@@ -36,10 +38,17 @@
     "react-container-query": "^0.11.0",
     "react-document-title": "^2.0.3",
     "react-media": "^1.8.0",
-    "umi-request": "^1.0.0"
+    "style-loader": "^0.23.1",
+    "umi-request": "^1.0.0",
+    "@storybook/addon-actions": "^5.0.1",
+    "@storybook/addon-links": "^5.0.1",
+    "@storybook/addons": "^5.0.1",
+    "@storybook/react": "^5.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
     "cross-env": "^5.1.1",
     "cross-port-killer": "^1.0.1",
     "eslint": "^5.4.0",
@@ -52,6 +61,8 @@
     "eslint-plugin-markdown": "^1.0.0-beta.6",
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
     "lint-staged": "^8.1.0",
     "prettier": "1.15.2",
     "stylelint": "^9.8.0",
@@ -74,7 +85,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint-staged"
     }
   }
 }
